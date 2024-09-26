@@ -1,0 +1,23 @@
+
+<h1 class = "container py-5 text-center">Crear Movies  </h1>
+
+
+<%= form_with model: @movie, method: :post do |form| %>
+    <div class="col-4  container ">
+            <div class="py-3">
+                <%= form.label :name, "Nombre de la pelicula", class: "form-label " %>
+                <%= form.text_field :title, class: "form-control" %>
+            </div>
+            <div class="py-3">
+                <%= form.label :synopsis, "synopsis de la pelicula", class: "form-label " %>
+                <%= form.text_field :synopsis, class: "form-control" %>
+            </div>
+            <div class="py-3">
+                <%= form.label :director, "director de la pelicula", class: "form-label" %>
+                <%= form.text_field :director, class: "form-control" %>
+            </div>
+            <div class="text-center py-5">
+                <%= form.submit "Submit", class: "btn btn-primary" %>
+            </div>
+    </div>
+ <% end %>
